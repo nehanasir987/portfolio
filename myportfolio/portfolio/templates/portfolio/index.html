@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Neha Portfolio</title>
+  <link rel="stylesheet" href="{% static 'css/home.style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/footer.style.css' %}">
+
+
+  <style>
+    .skills-section {
+  background: #f8f9fa;
+}
+
+.skill-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.skill-card:hover .skill-front {
+  transform: rotateY(180deg);
+}
+
+.skill-card:hover .skill-back {
+  transform: rotateY(0deg);
+}
+
+.skill-front,
+.skill-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.6s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-front {
+  background: white;
+  transform: rotateY(0deg);
+}
+
+.skill-front i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.skill-back {
+  background: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.skill-card h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+<body>
+
+          {% include 'portfolio/header.html' %}
+
+
+  <section class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+  Proficient in HTML, CSS, and JavaScript with a passion for crafting high-quality frontends. Now actively mastering Python, Django, and DevOps to grow as a full-stack web developer.
+</p>
+
+    <button class="btn">Explore Projects</button>
+  </div>
+</section>
+
+
+<section class="container py-5" id="about"><!--BootStrap class-->
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="images/neha.jpg" class="img-fluid rounded-4 shadow" alt="Neha">
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-primary mb-3">About Me</h2>
+      <p class="lead">
+        I'm <strong>Neha</strong>, a passionate Frontend Developer who crafts responsive and visually stunning websites using HTML, CSS, Bootstrap, and Django (Python).
+      </p>
+      <ul class="list-unstyled">
+        <li>💻 HTML, CSS, JavaScript, Bootstrap</li>
+        <li>⚙️ Backend with Python & Django</li>
+        <li>🎯 Focused on clean UI & UX</li>
+      </ul>
+      <a href="#" class="btn btn-primary mt-3">Download CV</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="skills" class="skills-section py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-5">My Skills</h2>
+    <div class="row justify-content-center">
+
+      <!-- Skill Card -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="skill-card">
+          <div class="skill-front">
+            <i class="fab fa-html5"></i>
+            <h5>HTML5</h5>
+          </div>
+          <div class="skill-back">
+            <p>Clean & semantic markup, SEO friendly structure.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="skill-card">
+          <div class="skill-front">
+            <i class="fab fa-css3-alt"></i>
+            <h5>CSS3</h5>
+          </div>
+          <div class="skill-back">
+            <p>Responsive layouts, Grid & Flexbox, modern styling.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="skill-card">
+          <div class="skill-front">
+            <i class="fab fa-bootstrap"></i>
+            <h5>Bootstrap</h5>
+          </div>
+          <div class="skill-back">
+            <p>Responsive design, components, and utilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Card -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="skill-card">
+          <div class="skill-front">
+            <i class="fab fa-python"></i>
+            <h5>Python / Django</h5>
+          </div>
+          <div class="skill-back">
+            <p>Backend development, REST API, ORM, secure apps.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+        {% include 'portfolio/footer.html' %}
+
+</body>
+</html>

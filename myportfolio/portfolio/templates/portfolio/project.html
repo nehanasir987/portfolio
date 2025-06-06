@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="{% static 'css/project.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/footer.style.css' %}">
+
+
+
+</head>
+<body>
+
+  {% include 'portfolio/header.html' %}
+
+<section id="projects" class="projects-section">
+  <div class="section-header">
+    <h1>Projects</h1>
+<p>
+  All of my projects are developed with a strong focus on clean code, efficient performance, and modern technologies. I ensure that each project is responsive, scalable, and easy to maintain.
+</p>
+  </div>
+  <div class="projects-grid">
+    <!-- Project Card -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>🧑‍💼 Portfolio Website</h3>
+        <span class="project-date">12 may 25</span>
+      </div>
+
+      <div class="project-image">
+        <img src="images/project1.png" alt="Portfolio Project">
+      </div>
+
+      <p class="project-desc">
+        A personal website that showcases my profile, skills, and projects. Features include responsive design, animated scroll, and downloadable CV.
+      </p>
+
+      <div class="tech-stack">
+        <span class="tech html">HTML</span>
+        <span class="tech css">CSS</span>
+        <span class="tech js">JavaScript</span>
+        <span class="tech python">Python</span>
+      </div>
+
+      <div class="project-links">
+  <a href="https://github.com/username/project-name" target="_blank" class="btn-glow">
+    💻 View Code on GitHub
+  </a>
+      </div>
+    </div>
+    <!-- Add more project-cards like this -->
+  </div>
+</section>
+        {% include 'portfolio/footer.html' %}
+
+</body>
+</html>

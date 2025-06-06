@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact-Me</title>
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/header.style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/footer.style.css' %}">
+
+
+</head>
+
+<body>
+  
+        {% include 'portfolio/header.html' %}
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>I’m open to freelance work, collaborations, and job opportunities. Feel free to reach out for professional inquiries. Let’s build something amazing together!</p>
+
+        <div class="info-box">
+          <p><strong>Email:</strong> neha.dev@example.com</p>
+          <p><strong>Phone:</strong> +92-123-4567890</p>
+          <p><strong>Location:</strong> Karachi, Pakistan</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/username" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+          <a href="mailto:neha.dev@example.com">Email</a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+        {% include 'portfolio/footer.html' %}
+
+</body>
+</html>
