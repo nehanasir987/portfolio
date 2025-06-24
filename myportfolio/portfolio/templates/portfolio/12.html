@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/project.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/header.style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/footer.style.css' %}" />
+</head>
+<body>
+  {% include 'portfolio/header.html' %}
+
+  <section id="projects" class="projects-section">
+    <div class="section-header">
+      <h1>Projects</h1>
+      <p>
+        All of my projects are developed with a strong focus on clean code, efficient performance, and modern technologies. I ensure that each project is responsive, scalable, and easy to maintain.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      {% for project in projects %}
+      <div class="project-card">
+        <div class="project-header">
+          <h3>{{ project.pro_icon }} {{ project.pro_title }}</h3>
+          <span class="project-date">{{ project.created_on }}</span>
+        </div>
+        <div class="project-image">
+          <img src="{{ project.pro_image.url }}" alt="{{ project.pro_title }}" />
+        </div>
+        <p class="project-desc">{{ project.pro_desc }}</p>
+        <div class="tech-stack">
+          {% for tech in project.get_tech_list %}
+            <span class="tech {{ tech|lower }}">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-links">
+          <a href="{{ project.github_link }}" target="_blank" class="btn-glow">
+        <i class="fab fa-github">Source Code</i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% include 'portfolio/footer.html' %}
+</body>
+</html>
