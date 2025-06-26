@@ -54,18 +54,19 @@ portfolio/
    cd portfolio
 
 2. **Create and activate virtual environment**
+   ```bash
    python -m venv venv
-   source venv/bin/activate     ## On Windows: venv\Scripts\activate  ____________    ##on Linux:  venv/bin/activate
+   source venv/bin/activate                      ## On Windows: venv\Scripts\activate      ____________    ##on Linux:  venv/bin/activate
 
-3. **Install dependencies**
+4. **Install dependencies**
    pip install -r requirements.txt
 
-4. **Run migrations**
+5. **Run migrations**
    python manage.py migrate
 
-5. **Create superuser (for admin access)**
+6. **Create superuser (for admin access)**
     python manage.py createsuperuser
 
-6. **Run development server**
+7. **Run development server**
     python manage.py runserver
    
