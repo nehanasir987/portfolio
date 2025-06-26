@@ -40,9 +40,11 @@ portfolio/
 │ ├── css/ # Stylesheets
 │ ├── js/ # JavaScript files
 │ └── images/ # Image assets
+****
 ├── templates/ # HTML templates
 │ ├── portfolio/ # App-specific templates
 │ └── base.html # Base template
+****
 ├── manage.py # Django management script
 └── requirements.txt # Python dependencies
 
@@ -61,14 +63,18 @@ portfolio/
    source venv/bin/activate                      ## On Windows: venv\Scripts\activate      ____________    ##on Linux:  venv/bin/activate
 
 4. **Install dependencies**
+   ```bash
    pip install -r requirements.txt
 
-5. **Run migrations**
+6. **Run migrations**
+    ```bash
    python manage.py migrate
 
-6. **Create superuser (for admin access)**
+8. **Create superuser (for admin access)**
+    ```bash
     python manage.py createsuperuser
 
-7. **Run development server**
+9. **Run development server**
+    ```bash
     python manage.py runserver
    
