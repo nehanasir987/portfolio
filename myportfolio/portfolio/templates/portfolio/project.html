@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="{% static 'css/project.css' %}" />
   <link rel="stylesheet" href="{% static 'css/header.style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <link rel="stylesheet" href="{% static 'css/footer.style.css' %}" />
   <style>
     /* Animation Classes */
@@ -55,11 +57,11 @@
     }
 
     .project-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none; /* Hide image when video is available */
-    }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
     .project-video {
       width: 100%;
@@ -128,19 +130,23 @@
       {% for project in projects %}
       <div class="project-card">
         <div class="project-header">
-          <h3><i class="{{ project.pro_icon }}"></i> {{ project.pro_title }}</h3>
+        <h3><i class="{{ project.pro_icon }}"></i> {{ project.pro_title }}</h3>
           <span class="project-date">{{ project.created_on }}</span>
         </div>
         <div class="project-image">
-          {% if project.pro_video %}
-            <video class="project-video" autoplay loop muted playsinline>
-              <source src="{{ project.pro_video.url }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% else %}
-            <img src="{{ project.pro_image.url }}" alt="{{ project.pro_title }}" class="project-img"/>
-          {% endif %}
-        </div>
+  {% if project.pro_video %}
+    <video class="project-video" autoplay loop muted playsinline>
+      <source src="{{ project.pro_video.url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% elif project.pro_image %}
+    <img src="{{ project.pro_image.url }}" alt="{{ project.pro_title }}" class="project-img"/>
+  {% else %}
+    <img src="{% static 'images/default.jpg' %}" alt="Default" class="project-img"/>
+  {% endif %}
+</div>
+
+
         <p class="project-desc">{{ project.pro_desc }}</p>
         <div class="tech-stack">
           {% for tech in project.get_tech_list %}

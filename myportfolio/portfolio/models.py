@@ -4,9 +4,9 @@ from django.db import models
 
 class Project(models.Model):
     pro_title = models.CharField(max_length=100)
-    pro_icon = models.CharField(max_length=10, default="💼")  # Emoji
-    created_on = models.DateField(auto_now_add=True)
-   # pro_image = models.ImageField(upload_to='projects/')
+    pro_icon = models.CharField(max_length=50, default="fas fa-briefcase")  
+    created_on = models.DateField(null=True, blank=True)
+    pro_image = models.ImageField(upload_to='projects_images/', null=True, blank=True)
     pro_video = models.FileField(upload_to='project_videos/', null=True, blank=True)   
     pro_desc = models.TextField()
     github_link = models.URLField()
@@ -38,3 +38,15 @@ class Certification(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.provider}"
+
+
+
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.name} ({self.email})"
