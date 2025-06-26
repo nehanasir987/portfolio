@@ -1,10 +1,12 @@
-Neha Nasir - Portfolio Website
+# Neha Nasir - Portfolio Website
 
+
+Screenshot:
 
 
 A modern, responsive portfolio website built with Django, showcasing my skills, projects, and professional journey as a Full Stack Developer.
 
-#Features:
+## Features:
 - **Responsive Design**:     Works on all devices from mobile to desktop  
 - **Modern UI**:             Clean, professional interface with animations  
 - **Project Showcase**:      Display projects with images/videos and tech stacks  
