@@ -54,3 +54,23 @@ body {
   color: #4db5ff;
   border-bottom: 2px solid #4db5ff;
 }
+
+
+@media (max-width: 768px) {
+  .nav-bar ul {
+    gap: 10px; /* Reduce space between menu items */
+  }
+
+  .nav-bar a {
+    font-size: 14px;    /* Smaller text */
+    padding: 3px 6px;   /* Less padding */
+  }
+
+  .logo {
+    font-size: 20px; /* Logo slightly smaller */
+  }
+
+  .header {
+    padding: 10px 20px; /* Reduce padding of header */
+  }
+}
