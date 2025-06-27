@@ -1,7 +1,12 @@
 # Neha Nasir - Portfolio Website
 
 
-Screenshot:
+# Home page:
+
+![portfolio](https://github.com/user-attachments/assets/56f25643-7d70-4e55-9029-06e436b9051d)
+
+# projects:
+![Screen Shot 2025-06-27 at 00 27 00](https://github.com/user-attachments/assets/89c2bc5d-1493-4abe-8c13-35487adc4dcc)
 
 
 A modern, responsive portfolio website built with Django, showcasing my skills, projects, and professional journey as a Full Stack Developer.
