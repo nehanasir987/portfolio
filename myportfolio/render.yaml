@@ -3,8 +3,8 @@ services:
     name: integrity-learning
     env: python
     plan: free
-    repo: https://github.com/neha/integrity-learning
-    branch: main
+    repo: https://github.com/nehanasir/portfolio
+    branch: my-new-branch
     buildCommand: "./build.sh"
     startCommand: "gunicorn myportfolio.wsgi:application"
     envVars:
