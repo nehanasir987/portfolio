@@ -88,9 +88,15 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
 import dj_database_url
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgres://neha_admin:neha56s%23%29p%28.@localhost:5432/myportfolio', 
+#         conn_max_age=600
+#     )
+# }
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://neha_admin:neha56s%23%29p%28.@localhost:5432/myportfolio', 
+        default='postgres://neha_admin:portfolio_db_pass@localhost:5432/myportfolio',
         conn_max_age=600
     )
 }

@@ -8,13 +8,13 @@ from .forms import ContactForm
 from .models import Project, Education, Certification  # 👈 Add these imports
 
 def index(request):
-    skills = [ 
-    {"name": "HTML5", "icon": "fab fa-html5", "desc": "Clean & semantic markup, SEO friendly structure.", "level": 95},
-    {"name": "CSS3", "icon": "fab fa-css3-alt", "desc": "Responsive layouts, Grid & Flexbox, modern styling.", "level": 90},
-    {"name": "Bootstrap", "icon": "fab fa-bootstrap", "desc": "Responsive design, components, and utilities.", "level": 85},
-    {"name": "Python / Django", "icon": "fab fa-python", "desc": "Backend development, REST API, ORM, secure apps.", "level": 80},
-    {"name": "Git / GitHub", "icon": "fab fa-github", "desc": "Version control, collaboration, and project management.", "level": 75}
-]
+    skills = [
+        {"name": "HTML5", "icon": "fab fa-html5", "desc": "Clean & semantic markup, SEO friendly structure.", "level": 95},
+        {"name": "CSS3", "icon": "fab fa-css3-alt", "desc": "Responsive layouts, Grid & Flexbox, modern styling.", "level": 90},
+        {"name": "Odoo", "icon": "fas fa-cubes", "desc": "ERP development, custom modules, views, workflows, and business logic.", "level": 85},
+        {"name": "Python / Django", "icon": "fab fa-python", "desc": "Backend development, REST API, ORM, secure apps.", "level": 80},
+        {"name": "Git / GitHub", "icon": "fab fa-github", "desc": "Version control, collaboration, and project management.", "level": 75}
+    ]
 
 
     
