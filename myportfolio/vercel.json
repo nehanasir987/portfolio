@@ -1,7 +1,8 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "wsgi.py",
+      "src": "myportfolio/wsgi.py",
       "use": "@vercel/python"
     }
   ],
@@ -12,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "wsgi.py"
+      "dest": "myportfolio/wsgi.py"
     }
   ]
 }
