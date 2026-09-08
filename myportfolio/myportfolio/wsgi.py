@@ -8,9 +8,18 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
+from pathlib import Path
+
+# Project root directory:
+# /var/task/myportfolio
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Make the project root available for imports
+sys.path.insert(0, str(BASE_DIR))
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myportfolio.settings")
 
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myportfolio.settings')
 
 application = get_wsgi_application()
